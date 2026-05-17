@@ -1,0 +1,42 @@
+HOW TO DEPLOY YOUR VITE APP TO GITHUB PAGES FROM SCRATCH
+==========================================================
+
+I have removed the GitHub Actions setup as requested. Here is the step-by-step guide to deploying your portfolio manually using the traditional "gh-pages" branch method.
+
+1. PREREQUISITES
+----------------
+You already have everything installed! I fixed the spelling in your package.json ("homepage") and vite.config.js ("base") so they match your actual GitHub URL exactly.
+The `gh-pages` package is already installed and your package.json scripts are ready.
+
+2. PUSH YOUR LATEST CODE
+------------------------
+First, make sure all your current local code is pushed to your main branch on GitHub:
+
+  git add .
+  git commit -m "Finalize code for gh-pages deployment"
+  git push
+
+3. DEPLOY TO GITHUB PAGES
+-------------------------
+Run this single command in your terminal:
+
+  npm run deploy
+
+What this command does:
+- It first triggers the "predeploy" script (which runs `npm run build` to create your optimized /dist folder).
+- Then it pushes ONLY the built files from the /dist folder to a special branch called "gh-pages" on your repository.
+
+4. CONFIGURE GITHUB SETTINGS
+----------------------------
+Finally, you must tell GitHub to use this new "gh-pages" branch for your website.
+
+1. Go to your repository on GitHub (https://github.com/hadianjum-1/portfolio)
+2. Click on the "Settings" tab.
+3. On the left sidebar, click on "Pages".
+4. Under "Build and deployment", set the Source dropdown to "Deploy from a branch".
+5. Right below that, under "Branch", change it from "main" (or "master") to "gh-pages".
+6. Click Save.
+
+Your website will be live at https://hadianjum-1.github.io/portfolio/ within a minute! 
+
+Whenever you make future changes to your code, you just run `npm run deploy` again, and the live site will automatically update.
