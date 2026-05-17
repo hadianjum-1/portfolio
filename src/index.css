@@ -1,0 +1,59 @@
+/* ============================================================
+   GLOBAL RESET & DESIGN TOKENS
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary:          #3B82F6;
+  --secondary:        #8B5CF6;
+  --accent:           #10B981;
+  --background-dark:  #0A0A0A;
+  --background-light: #FFFFFF;
+  --text-dark:        #1A1A1A;
+  --text-light:       #F5F5F5;
+  --font-main:        'Space Grotesk', sans-serif;
+}
+
+/* Reduced-motion safety */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration:   0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration:  0.01ms !important;
+    scroll-behavior:      auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--background-dark);
+  color:            var(--text-light);
+  overflow-x:       hidden;
+  font-family:      var(--font-main);
+  -webkit-font-smoothing:  antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height:    auto;
+  display:   block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============================================================
+   TAILWIND v4 IMPORT
+   ============================================================ */
+@import "tailwindcss";

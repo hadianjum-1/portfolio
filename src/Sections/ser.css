@@ -1,0 +1,104 @@
+/* ============================================================
+   SERVICES SECTION — responsive
+   ============================================================ */
+
+.ser {
+  width:     90vw;
+  max-width: 1200px;
+  margin:    0 auto;
+  padding:   0 16px 40px;
+}
+
+/* ── Badge ── */
+.he {
+  font-family: 'Space Grotesk', sans-serif;
+  text-align:  center;
+  display:     block;
+  width:       fit-content;
+  padding:     10px 28px;
+  margin:      40px auto 16px;
+  font-size:   1.1rem;
+  font-weight: 700;
+  background:  linear-gradient(to right, #8B5CF6, #1D4ED8);
+  border-radius: 12px;
+  color:       white;
+}
+
+/* ── Sub-heading block ── */
+.e {
+  text-align: center;
+  width:      80%;
+  max-width:  700px;
+  margin:     0 auto 40px;
+}
+
+.ser-main-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size:   clamp(1.4rem, 2.8vw, 2rem);
+  font-weight: 700;
+  color:       #1D4ED8;
+  margin-bottom: 10px;
+}
+
+.e > p {
+  font-size:   1rem;
+  color:       rgba(255, 255, 255, 0.5);
+}
+
+/* ── Cards row ── */
+.serc {
+  display:         flex;
+  align-items:     stretch;
+  justify-content: center;
+  gap:             32px;
+  flex-wrap:       wrap;
+  width:           100%;
+  margin:          0 auto;
+}
+
+/* ── CTA row ── */
+.pyn {
+  text-align: center;
+  margin:     36px auto 30px;
+}
+
+.ser .iu {
+  display:         inline-block;
+  text-decoration: none;
+  background:      linear-gradient(to right, #8B5CF6, #1D4ED8);
+  color:           white;
+  padding:         14px 40px;
+  border:          none;
+  border-radius:   12px;
+  font-family:     'Space Grotesk', sans-serif;
+  font-size:       1rem;
+  font-weight:     600;
+  cursor:          pointer;
+  box-shadow:      0 4px 20px rgba(139, 92, 246, 0.3);
+  transition:      box-shadow 0.3s ease;
+}
+
+.ser .iu:hover {
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.5);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .serc { gap: 24px; }
+}
+
+@media (max-width: 768px) {
+  .ser    { width: 95vw; }
+  .e      { width: 95%; }
+  .serc   { flex-direction: column; align-items: center; }
+}
+
+@media (max-width: 480px) {
+  .ser-main-heading { font-size: 1.3rem; }
+  .e > p            { font-size: 0.9rem; }
+  .ser .iu          { width: 100%; padding: 14px 20px; }
+  .pyn              { width: 90%; }
+}

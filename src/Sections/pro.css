@@ -1,0 +1,98 @@
+/* ============================================================
+   PROCESS SECTION — responsive
+   ============================================================ */
+
+.process {
+  width:           90vw;
+  max-width:       1200px;
+  margin:          60px auto;
+  padding:         0 16px;
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  gap:             60px;
+  min-height:      auto;
+}
+
+/* ── Left ── */
+.process-left {
+  flex:   0 0 38%;
+}
+
+.process-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size:   clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.process-sub {
+  font-size:   clamp(1rem, 1.8vw, 1.25rem);
+  color:       rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+}
+
+/* ── Right ── */
+.process-right {
+  flex: 1;
+  display:        flex;
+  flex-direction: column;
+  gap:            0;
+}
+
+/* ── Step ── */
+.po2 {
+  padding:       20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.po2:first-child { padding-top: 0; }
+.po2:last-child  { border-bottom: none; }
+
+.step-heading {
+  font-family:   'Space Grotesk', sans-serif;
+  font-size:     clamp(1.1rem, 2vw, 1.5rem);
+  font-weight:   700;
+  margin-bottom: 6px;
+}
+
+.po2 p {
+  font-size:   0.95rem;
+  color:       rgba(255, 255, 255, 0.5);
+  line-height: 1.65;
+}
+
+/* Gradient text */
+.ui {
+  background: linear-gradient(to right, #8B5CF6, #1D4ED8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color:       transparent;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .process { gap: 40px; }
+}
+
+@media (max-width: 768px) {
+  .process {
+    flex-direction: column;
+    align-items:    flex-start;
+    gap:            32px;
+    width:          95vw;
+  }
+
+  .process-left,
+  .process-right { flex: unset; width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .process-title { font-size: 3rem; }
+}

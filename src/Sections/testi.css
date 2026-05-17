@@ -1,0 +1,170 @@
+/* ============================================================
+   TESTIMONIALS SECTION — responsive
+   ============================================================ */
+
+.testi {
+  width:     100%;
+  overflow:  hidden;
+  position:  relative;
+  margin:    100px auto;
+  padding:   0 0 20px;
+}
+
+/* ── Heading block ── */
+.i {
+  width:     60%;
+  max-width: 680px;
+  margin:    0 auto 56px;
+  text-align: center;
+}
+
+.testi-title {
+  font-family:   'Space Grotesk', sans-serif;
+  font-size:     clamp(1.5rem, 3vw, 2rem);
+  font-weight:   700;
+  color:         white;
+  margin-bottom: 14px;
+  line-height:   1.25;
+}
+
+.testi-sub {
+  font-size:   clamp(0.9rem, 1.5vw, 1.05rem);
+  color:       rgba(255, 255, 255, 0.45);
+  line-height: 1.7;
+}
+
+/* ── Slider wrapper — clips overflow ── */
+.slider-outer {
+  width:     100%;
+  overflow:  hidden;
+  position:  relative;
+}
+
+/* Fade edges */
+.slider-outer::before,
+.slider-outer::after {
+  content:  '';
+  position: absolute;
+  top:      0;
+  bottom:   0;
+  width:    120px;
+  z-index:  2;
+  pointer-events: none;
+}
+.slider-outer::before {
+  left:       0;
+  background: linear-gradient(to right, #0A0A0A, transparent);
+}
+.slider-outer::after {
+  right:      0;
+  background: linear-gradient(to left, #0A0A0A, transparent);
+}
+
+/* ── Track ── */
+.slider-track {
+  width:       max-content;
+  display:     flex;
+  align-items: stretch;
+  gap:         28px;
+  padding:     20px 0 30px;
+  will-change: transform;
+}
+
+/* ── Card ── */
+.c1 {
+  width:      460px;
+  min-height: 260px;
+  flex-shrink: 0;
+
+  display:        flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding:       24px;
+  border-radius: 20px;
+
+  background: linear-gradient(to bottom right, #131018, #202226);
+  border:     1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 0 20px rgba(59,  130, 246, 0.12),
+    0 0 40px rgba(139, 92,  246, 0.09);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor:     default;
+}
+
+.c1:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 32px rgba(59,  130, 246, 0.22),
+    0 0 64px rgba(139, 92,  246, 0.18);
+}
+
+/* ── Card Quote ── */
+.card-quote {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  line-height: 1.6;
+}
+
+.card-quote span {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* ── Divider ── */
+.line {
+  width:        90%;
+  margin:       18px auto 8px;
+  border:       none;
+  border-top:   1px solid rgba(255, 255, 255, 0.09);
+}
+
+/* ── Info row ── */
+.info {
+  display:     flex;
+  align-items: center;
+  gap:         12px;
+  padding:     0 8px;
+}
+
+.info img {
+  width:         40px;
+  height:        40px;
+  border-radius: 50%;
+  object-fit:    cover;
+  flex-shrink:   0;
+}
+
+.name h3 {
+  font-size:   0.9rem;
+  font-weight: 700;
+  color:       white;
+  margin-bottom: 2px;
+}
+
+.name p {
+  font-size: 0.78rem;
+  color:     rgba(255, 255, 255, 0.45);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .i { width: 75%; }
+  .c1 { width: 380px; }
+  .slider-outer::before,
+  .slider-outer::after { width: 60px; }
+}
+
+@media (max-width: 640px) {
+  .testi { margin: 70px auto; }
+  .i     { width: 90%; }
+  .c1    { width: 300px; min-height: 240px; }
+  .slider-outer::before,
+  .slider-outer::after { width: 32px; }
+}

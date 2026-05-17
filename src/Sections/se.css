@@ -1,0 +1,87 @@
+/* ============================================================
+   SERVICE CARD — responsive
+   ============================================================ */
+
+.bi {
+  width:         340px;
+  flex:          0 0 340px;
+  min-height:    420px;
+  border:        1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  background:    linear-gradient(to bottom right, #131018, #1c1e22);
+  overflow:      hidden;
+  transition:    transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.bi:hover {
+  transform:    translateY(-8px);
+  box-shadow:
+    0 0 28px rgba(59, 130, 246, 0.2),
+    0 0 56px rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.35);
+}
+
+.co {
+  margin:  0 auto;
+  width:   95%;
+  padding: 20px 16px;
+}
+
+.service-title {
+  text-align:   center;
+  font-size:    clamp(1.2rem, 2vw, 1.5rem);
+  font-weight:  700;
+  margin-bottom: 8px;
+  font-family:  'Space Grotesk', sans-serif;
+  color:        white;
+}
+
+.service-desc {
+  text-align:   center;
+  font-size:    0.95rem;
+  color:        rgba(255, 255, 255, 0.45);
+  margin-bottom: 16px;
+  font-family:  'Space Grotesk', sans-serif;
+  font-weight:  400;
+}
+
+.service-badge {
+  text-align:    center;
+  font-size:     1rem;
+  font-weight:   600;
+  margin-bottom: 12px;
+  font-family:   'Space Grotesk', sans-serif;
+  background:    #1D4ED8;
+  color:         white;
+  padding:       8px 14px;
+  border-radius: 10px;
+  width:         fit-content;
+  margin-left:   auto;
+  margin-right:  auto;
+}
+
+.co ul {
+  list-style:   disc;
+  padding-left: 20px;
+}
+
+.co ul li {
+  font-size:    0.92rem;
+  color:        rgba(255, 255, 255, 0.6);
+  line-height:  1.7;
+  font-family:  'Space Grotesk', sans-serif;
+  margin-bottom: 4px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .bi { width: 100%; max-width: 420px; flex: unset; }
+}
+
+@media (max-width: 480px) {
+  .bi { max-width: 100%; }
+  .co { padding: 16px 12px; }
+}
