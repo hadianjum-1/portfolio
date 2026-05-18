@@ -21,4 +21,4 @@ but received
         @keyframes slideUp { from { opacity: 0; transform: translateY(40px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-      `}})]})};(0,x.createRoot)(document.getElementById(`root`)).render((0,W.jsx)(b.StrictMode,{children:(0,W.jsx)(()=>(0,W.jsxs)(bn,{basename:`/portfolio`,children:[(0,W.jsx)(Js,{}),(0,W.jsxs)(Mt,{children:[(0,W.jsx)(At,{path:`/`,element:(0,W.jsx)(Vf,{})}),(0,W.jsx)(At,{path:`/about`,element:(0,W.jsx)(Uf,{})}),(0,W.jsx)(At,{path:`/portfolio`,element:(0,W.jsx)(Kf,{})})]}),(0,W.jsx)(Hf,{})]}),{})}));
+      `}})]})};(0,x.createRoot)(document.getElementById(`root`)).render((0,W.jsx)(b.StrictMode,{children:(0,W.jsx)(()=>(0,W.jsxs)(bn,{children:[(0,W.jsx)(Js,{}),(0,W.jsxs)(Mt,{children:[(0,W.jsx)(At,{path:`/`,element:(0,W.jsx)(Vf,{})}),(0,W.jsx)(At,{path:`/about`,element:(0,W.jsx)(Uf,{})}),(0,W.jsx)(At,{path:`/portfolio`,element:(0,W.jsx)(Kf,{})})]}),(0,W.jsx)(Hf,{})]}),{})}));
