@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      var redirectUrl = window.location.pathname + window.location.search + window.location.hash;
+      if (redirectUrl === '/404.html') {
+        redirectUrl = '/';
+      }
+      window.location.replace('/?redirect=' + encodeURIComponent(redirectUrl));
+    </script>
+    <meta http-equiv="refresh" content="0; url=/?redirect=%2F" />
+  </head>
+  <body>
+    Redirecting to the application...
+  </body>
+</html>
