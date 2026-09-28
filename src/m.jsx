@@ -6,6 +6,7 @@ import Service from './Sections/Service'
 import Process from './Sections/Process'
 import Testimonail from './Sections/Testimonail'
 import Faqs from './Sections/Faqs'
+import Contact from './Sections/Contact'
 
 const M = () => {
   return (
@@ -17,6 +18,7 @@ const M = () => {
      <Process/>
      <Testimonail/>
      <Faqs/>
+     <Contact/>
    </main>
   )
 }

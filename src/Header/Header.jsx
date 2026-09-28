@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import "./Header.css";
+import { Link } from "react-router-dom";
+// Use route paths for Links to avoid passing React elements
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -59,11 +61,12 @@ const Header = () => {
       role="banner"
     >
       {/* Logo */}
-      <div ref={logoRef} className="header-logo" aria-label="Hadi Anjum — Home">
-        <a href="#hero">
+        <div ref={logoRef} className="header-logo" aria-label="Hadi Anjum — Home">
+        <Link to="/">
           <span className="logo-text">Hadi</span>
           <span className="logo-dot">.</span>
-        </a>
+          </Link>
+        
       </div>
 
       {/* Desktop Nav */}
@@ -74,9 +77,9 @@ const Header = () => {
         role="navigation"
       >
         <ul>
-          <li><a href="#about"     className="nav-link">About me</a></li>
-          <li><a href="#portfolio" className="nav-link">Portfolio</a></li>
-          <li><a href="#contact"   className="nav-link">Contact</a></li>
+          <li><Link to={'/about'} onClick={() => setMenuOpen(false)}>About</Link></li>
+          <li><Link to="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</Link></li>
+          <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
         </ul>
       </nav>
 
@@ -103,9 +106,11 @@ const Header = () => {
       role="navigation"
     >
       <ul>
-        <li><a href="#about"     onClick={() => setMenuOpen(false)}>About me</a></li>
-        <li><a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a></li>
-        <li><a href="#contact"   onClick={() => setMenuOpen(false)}>Contact</a></li>
+        <li><Link to={'/about'} onClick={() => setMenuOpen(false)}>About</Link></li>
+        <li><Link to="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</Link></li>
+        <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
+        
+        {/* <a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a> */}
       </ul>
     </nav>
     </>

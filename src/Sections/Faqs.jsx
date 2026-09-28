@@ -81,7 +81,7 @@ const Faqs = () => {
 
   return (
     <section
-      id="contact"
+
       ref={sectionRef}
       className="faq"
       aria-label="Frequently asked questions"

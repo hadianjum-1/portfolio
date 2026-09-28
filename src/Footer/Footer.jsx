@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 import "./footer.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -11,17 +12,20 @@ const Footer = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
-        footerRef.current?.querySelectorAll(
-          ".footer-brand, .footer-column"
-        ) ?? [],
+        footerRef.current?.querySelectorAll(".footer-brand, .footer-column") ??
+          [],
         { y: 40, opacity: 0 },
         {
-          y: 0, opacity: 1, stagger: 0.12, duration: 0.8, ease: "power3.out",
+          y: 0,
+          opacity: 1,
+          stagger: 0.12,
+          duration: 0.8,
+          ease: "power3.out",
           scrollTrigger: {
             trigger: footerRef.current,
             start: "top 90%",
           },
-        }
+        },
       );
     }, footerRef);
 
@@ -49,9 +53,9 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="footer-column">
             <h3>Quick Links</h3>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <Link to="/about">About</Link>
+          <Link to="/portfolio">Portfolio</Link>
+     <Link to="/contact" >Contact</Link>
           </div>
 
           {/* Services */}
@@ -65,11 +69,14 @@ const Footer = () => {
           {/* Contact */}
           <div className="footer-column">
             <h3>Contact</h3>
-            <a href="mailto:Hadi@nexgenbyte.com" aria-label="Send email to Hadi Anjum">
+            <a
+              href="mailto:Hadi@nexgenbyte.com"
+              aria-label="Send email to Hadi Anjum"
+            >
               Hadi@nexgenbyte.com
             </a>
             <a
-              href="https://linkedin.com/in/hadianjum"
+              href="https://www.linkedin.com/in/hadi-anjum-708602285/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Hadi Anjum on LinkedIn"
@@ -77,7 +84,7 @@ const Footer = () => {
               LinkedIn
             </a>
             <a
-              href="https://instagram.com/hadianjum"
+              href="https://www.instagram.com/hadianjum/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Hadi Anjum on Instagram"
@@ -85,7 +92,7 @@ const Footer = () => {
               Instagram
             </a>
             <a
-              href="https://behance.net/hadianjum"
+              href="https://www.behance.net/hadianjum1"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Hadi Anjum on Behance"
